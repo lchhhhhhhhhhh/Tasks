@@ -13,9 +13,7 @@ int main(int argc, char** argv)
                 fp = fopen(name,"w");
                 while (1){
                 double res = process();
-                int hel = fprintf(fp,"%f\n",res);
-                fflush(fp);
-                printf("%d",hel);
+                fflush(fp);             
                 }
             
             fclose(fp);
