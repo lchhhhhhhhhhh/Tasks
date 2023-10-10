@@ -86,12 +86,7 @@ double calc(char* str){
                 stack_push(&n,e);
             } 
         }
-        t = stackn_length(&n);
-        if ( t < 2)
-            {
-                printf("请确认输入正确的表达式！\n");
-                return ERROR;
-            }
+        
         switch(str[i]){
             case '+':
                 stack_pop(&n,&a);
@@ -122,6 +117,8 @@ double calc(char* str){
         }
     }
     stack_pop(&n,&e);
+    if (e == ERROR)
+        printf("建议检查表达式！\n");
     return e;
 
 }
