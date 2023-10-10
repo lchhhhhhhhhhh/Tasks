@@ -44,6 +44,11 @@ Bool is_empty(Stack* pStack)
 		return 0;
 };
 
+int stackn_length(Stackn *pStack)
+{
+    return pStack ->pTop - pStack ->pBase;
+}
+
 int stack_length(Stack *pStack)
 {
     return pStack ->pTop - pStack ->pBase;

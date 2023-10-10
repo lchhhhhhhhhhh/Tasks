@@ -71,7 +71,7 @@ void trans(char* str,char* p){
 }
 
 double calc(char* str){
-    int i;
+    int i,t;
     double e,a,b;
     char c[50];
     Stackn n;
@@ -86,6 +86,12 @@ double calc(char* str){
                 stack_push(&n,e);
             } 
         }
+        t = stackn_length(&n);
+        if ( t < 2)
+            {
+                printf("请确认输入正确的表达式！\n");
+                return ERROR;
+            }
         switch(str[i]){
             case '+':
                 stack_pop(&n,&a);
@@ -110,7 +116,7 @@ double calc(char* str){
                 else
                 {
                     printf("Math error!\n");
-                    return 0;
+                    return ERROR;
                 }
                 break;
         }

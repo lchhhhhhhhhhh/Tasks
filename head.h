@@ -28,5 +28,16 @@ typedef struct
     int size;
 }Stackn;
 
-
-
+extern Status init_stack(Stackn* pStack);
+extern Status init_stackc(Stack* pStack);
+extern void stack_free(Stack *pStack);
+extern void stack_clear(Stack *pStack);
+extern Status stack_pushc(Stack *pStack,char e);
+extern Status stack_push(Stackn *pStack,StackElem e);
+extern Status stack_pop(Stackn* pStack,StackElem *pElem);
+extern Status stack_popc(Stack* pStack,char* pChar);
+extern int StackEmpty(Stack *s);
+extern void trans(char* str,char* p);
+extern double calc(char* str);
+extern double process();
+extern int stackn_length(Stackn *pStack);
