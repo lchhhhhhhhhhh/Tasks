@@ -76,6 +76,9 @@ double calc(char* str){
     char c[50];
     Stackn n;
     init_stack(&n);
+    #ifdef _DEBUG
+        printf("Fail to initialize stack!!!\n");
+    #endif
     for(i=0; i<strlen(str); i++){
         int d=0;
         while(isdigit(str[i]) || str[i] =='.'){
@@ -131,6 +134,11 @@ double process(){
     char *out;
     char* p;
     p =  readline("");
+    #ifdef _DEBUG
+                    printf("读取表达式成功!\n");
+                #else
+                    printf("读取表达式失败!\n");
+                #endif
     strcpy(str,p);
     if(str[0]=='h'&&str[1]=='e'&&str[2]=='l'&&str[3]=='p')
     {

@@ -11,6 +11,9 @@ int main(int argc, char** argv)
         if(result == 't'){
         
                 fp = fopen(name,"w");
+                #ifdef _DEBUG
+                    printf("已创建文件.\n");
+                #endif
                 while (1){
                 double res = process();
                 fflush(fp);             
