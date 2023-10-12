@@ -1,8 +1,8 @@
 last : handle.o main.o stack.o
-	gcc main.o handle.o stack.o -o last -lreadline 
+	gcc main.o handle.o stack.o -o last -lreadline -lm 
 
 main.o : main.c head.h
-	gcc -c main.c -o main.o
+	gcc -c main.c -o main.o -lma
 
 handle.o : handle.c head.h
 	gcc -c handle.c -o handle.o -lreadline
